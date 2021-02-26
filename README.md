@@ -5,4 +5,6 @@
  - Isolated messages from user using ID by running create_dataset.py
  - Train NLP model using [run_clm.py](https://github.com/huggingface/transformers/blob/master/examples/language-modeling/run_clm.py) on datasets created by running the following script:
 
-    python run_clm.py --model_name_or_path gpt2 --train_file=<TRAIN_DATASET> --validation_file=<VALIDATE_DATASET> --do_train --do_eval --output_dir=<OUTPUT_DIRECTORY> --block_size=32
+    `python run_clm.py --model_name_or_path gpt2 --train_file=<TRAIN_DATASET> --validation_file=<VALIDATE_DATASET> --do_train --do_eval --output_dir=<OUTPUT_DIRECTORY> --block_size=32`
+
+ - To run the trained model, run gpt2model.py after changing the directory to where the trained model is
