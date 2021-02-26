@@ -31,13 +31,15 @@ def create_dataset(fb_name, discord_id, files, train_dataset_size=0.9):
 					if source == "fb":
 						if m["sender_name"] == fb_name:
 							try:
-								user_text.append(m["content"])
+								if "http" not in m["content"]:
+									user_text.append(m["content"])
 							except:
 								pass
 					elif source == "discord":
 						if m["author"]["id"] == discord_id:
 							try:
-								user_text.append(m["content"])
+								if "http" not in m["content"]:
+									user_text.append(m["content"])
 							except:
 								pass
 				except:
