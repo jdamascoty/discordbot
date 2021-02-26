@@ -34,11 +34,11 @@ def create_dataset(user_id, files, train_dataset_size=0.9):
 
 	EPOCHS = 4
 
-	with open('{}_train.txt'.format(user_id), 'w') as f:
+	with open('{}_train.txt'.format(user_id), 'w', encoding="utf8") as f:
 		data = tokenize(train_dataset, EPOCHS)
 		f.write(data)
 
-	with open('{}_valid.txt'.format(user_id), 'w') as f:
+	with open('{}_valid.txt'.format(user_id), 'w', encoding="utf8") as f:
 		data = tokenize(valid_dataset, 1)
 		f.write(data)
 
